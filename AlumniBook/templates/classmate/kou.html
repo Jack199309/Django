@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div id='layerD0A590D27B050BA2FB621C339CCB74D8' type='gototop'  class='cstlayer' style='left: 1008px; top: 100px; position: absolute; z-index: 122; width: 192px; height: 35px;'  mid=""   deg='0'>
+
+<div class="wp-gototop_content" style="padding: 0px; border-color: transparent; border-width: 0px; overflow: hidden; width: 192px; height: 35px;">
+
+    <script language="javascript">
+
+$(function(){
+		// Fixed IE border-radius
+		var $piegttops = $('#layerD0A590D27B050BA2FB621C339CCB74D8').not('[deleted="deleted"]');
+		if ($.browser.msie && ($.browser.version <= 8)) {
+			if ($.inArray("styleh", ['arrowleft','arrowright']) == -1) {
+				$('.wpgttop-wrapper,a.gttoparea,a.gttoparea div', '#layerD0A590D27B050BA2FB621C339CCB74D8').css("behavior", 'url(script/pie.htc)');
+				setTimeout(function(){
+					if ($piegttops.find('css3-container').length > 0) $piegttops.find('.piemask').remove();
+					else setTimeout(arguments.callee, 500);
+				}, 500);
+			} else $piegttops.find('.piemask').remove();
+		}
+		});</script>
+
+
+</div>
+
+{# 返回顶部按钮 #}
+<!--gototop js-->
+<script lang="javascript">
+$(document).ready(function () {
+	var goToTopijsTime;
+	$.fn.goToTopijs=function(options){
+		var opts = $.extend({},$.fn.goToTopijs.def,options);
+		var $window=$(window);
+		var $body = $('#scroll_container');
+		var $this=$(this);
+		clearTimeout(goToTopijsTime);
+		goToTopijsTime=setTimeout(function(){
+			var controlLeft;
+			if ($window.width() > opts.pageHeightJg * 2 + opts.pageWidth) {
+				controlLeft = ($window.width() - opts.pageWidth) / 2 + opts.pageWidth + opts.pageWidthJg;
+			}else{
+				controlLeft = $window.width()- opts.pageWidthJg-$this.width();
+			}
+			var cssfixedsupport=$.browser.msie && parseFloat($.browser.version) < 7;//判断是否ie6
+			var controlTop=$window.height() - opts.pageHeightJg;
+			controlTop=cssfixedsupport ? $window.scrollTop() + controlTop : controlTop;
+			var scrolTop = Math.max($(window).scrollTop(), $body.scrollTop());
+                        var shouldvisible=( scrolTop >= opts.startline )? true : false;
+			if (shouldvisible){
+				$this.stop().show();
+			}else{
+				$this.stop().hide();			}
+						var curdistance = '1';
+			var gscrollWidth = 18;
+			var gt_right = parseInt(gscrollWidth) + parseInt(curdistance);
+			$this.css({
+				position: cssfixedsupport ? 'absolute' : 'fixed',
+				top: controlTop,
+				right:gt_right
+			});
+		},30);
+		$(this).click(function(event){
+			$(document.body).add($body).stop().animate( { scrollTop: $(opts.targetObg).offset().top}, opts.duration);
+			$(this).blur();
+			event.preventDefault();
+			event.stopPropagation();
+		});
+	};
+
+	$.fn.goToTopijs.def={
+		pageWidth:310,//页面宽度
+		pageWidthJg:2,//按钮和页面的间隔距离
+		pageHeightJg:100+40,//按钮和页面底部的间隔距离
+		startline:120,//出现回到顶部按钮的滚动条scrollTop距离
+		duration:200,//回到顶部的速度时间
+		targetObg:"body"//目标位置
+	};
+});
+$(function(){
+        $('<a href="javascript:;" class="gototop_backToTop" title="返回顶部">返回顶部</a>').appendTo("body");
+});
+
+
+$(function(){
+	$(".gototop_backToTop").goToTopijs();
+	var $scroll_container = $(window).add('#scroll_container');
+	$scroll_container.bind('scroll resize',function(){
+		$(".gototop_backToTop").goToTopijs({
+			pageWidth:960,
+			duration:0
+		});
+	});
+});
+
+</script>
+<!--gototop js end-->
+</div><script>		         $('#layerD0A590D27B050BA2FB621C339CCB74D8').triggerHandler('layer_ready');</script><div id='layerED8428923A6FB18EC5443DCB1EE15382' type='unslider'  class='cstlayer' style='left: 0px; top: 100px; position: absolute; z-index: 102; width: 1200px; height: 700px;'  mid=""   deg='0'><style>
+#layerED8428923A6FB18EC5443DCB1EE15382html5zoo-1{
+	margin:0 auto;
+}
+</style>
+<div id="layerED8428923A6FB18EC5443DCB1EE15382_content" class="wp-unslider_content" style="overflow: hidden; border: medium none; left: -74.5px; width: 1349px; height: 700px; position: absolute;">
+<script type="text/javascript">
+
+</script>
+
+
+
+</body>
+</html>
